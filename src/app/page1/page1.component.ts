@@ -16,14 +16,13 @@ export class Page1Component implements OnInit {
 users:User[];
   ngOnInit(){
     this.SpinnerService.show(); 
-    //
    fromEvent(document,'click').pipe(switchMap(()=>this.user.getuserdetail()))
     //setTimeout (() => {
     .subscribe(
         data=>{this.users=data;
   this.SpinnerService.hide();  
         });
-    //  }, 6000);
+    //}, 6000);
 
   }
 
