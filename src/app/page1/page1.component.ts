@@ -4,6 +4,7 @@ import {User} from '../UserModel/User'
 import { NgxSpinnerService } from "ngx-spinner";
 import { fromEvent } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { interval } from 'rxjs';
 @Component({
   selector: 'app-page1',
   templateUrl: './page1.component.html',
@@ -15,14 +16,14 @@ export class Page1Component implements OnInit {
 users:User[];
   ngOnInit(){
     this.SpinnerService.show(); 
+    //
+   fromEvent(document,'click').pipe(switchMap(()=>this.user.getuserdetail()))
     //setTimeout (() => {
-      fromEvent(document,'click')
-    .pipe(switchMap(()=>this.user.getuserdetail()))
     .subscribe(
         data=>{this.users=data;
   this.SpinnerService.hide();  
         });
-      //}, 3000);
+    //  }, 6000);
 
   }
 
