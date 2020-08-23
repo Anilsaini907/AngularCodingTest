@@ -15,11 +15,14 @@ h3{
         margin-left: 0px;
         width:auto;
     }
+    table {
+        width: 100%;
+    }
   }
   @media only screen and (max-width: 768px) and (min-width: 501px) 
 {
     button{
-        margin-left: 540px;
+        margin-left: 430px;
     }
     h3{
         margin-left: 200px;
@@ -29,10 +32,10 @@ h3{
   @media only screen and (max-width: 1400px) and (min-width: 769px) 
   {
       button{
-          margin-left: 1000px;
+          margin-left: 800px;
       }
       h3{
-          margin-left: 500px;
+          margin-left: 350px;
           width: 100%;
       }
     }

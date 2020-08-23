@@ -1,14 +1,14 @@
 <h3>User is on page 2 here</h3>
 <button type="button" routerLink="/page1" class="btn btn-success">Click here for Page1</button>
-<div class="container-fluid">
-    <div class="chart">
+<div class="container">
+    <div id="chart" class="col-">
         <ngx-charts-pie-chart 
         (window:resize)="onResize($event)"
         trimLabels="false"
         [results]="saleData"
         [legend]="true"
         [legendTitle]="'Product'" 
-        [view]="[1000,500]"
+        [view]="view">"
         [labels]="true" >
     </ngx-charts-pie-chart>
     </div>

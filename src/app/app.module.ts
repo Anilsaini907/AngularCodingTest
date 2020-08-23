@@ -8,9 +8,9 @@ import { Page2Component } from './page2/page2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { HttpClientModule } from '@angular/common/http';
 import{ UserService } from './service/user.service';
-import { HttpcancelService } from './service/httpcancel.service';
+
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ManagehttpInterceptor } from './service/managehttp.interceptor';
+
 import { NgxSpinnerModule } from "ngx-spinner"; 
 @NgModule({
   declarations: [
@@ -23,8 +23,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     AppRoutingModule,NgxChartsModule,
     HttpClientModule,NgxSpinnerModule 
   ],
-  providers: [HttpcancelService,UserService,
-    { provide: HTTP_INTERCEPTORS, useClass: ManagehttpInterceptor, multi: true } ],
+  providers: [UserService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
